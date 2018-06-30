@@ -1,0 +1,219 @@
+
+<head>
+    <meta charset="utf-8">
+    <title>Assista a um bom filme!</title>
+
+    <!-- Bootstrap 3 -->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap-theme.min.css">
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    <style type="text/css" media="screen">
+        body {
+            padding-top: 80px;
+        }
+        #trailer .modal-dialog {
+            margin-top: 200px;
+            width: 640px;
+            height: 480px;
+        }
+        .hanging-close {
+            position: absolute;
+            top: -12px;
+            right: -12px;
+            z-index: 9001;
+        }
+        #trailer-video {
+            width: 100%;
+            height: 100%;
+        }
+        .movie-tile {
+            margin-bottom: 20px;
+            padding-top: 20px;
+        }
+        .movie-tile:hover {
+            background-color: #EEE;
+            cursor: pointer;
+        }
+        .scale-media {
+            padding-bottom: 56.25%;
+            position: relative;
+        }
+        .scale-media iframe {
+            border: none;
+            height: 100%;
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 0;
+            background-color: white;
+        }
+    </style>
+    <script type="text/javascript" charset="utf-8">
+        // Pause the video when the modal is closed
+        $(document).on('click', '.hanging-close, .modal-backdrop, .modal', function (event) {
+            // Remove the src so the player itself gets removed, as this is the only
+            // reliable way to ensure the video stops playing in IE
+            $("#trailer-video-container").empty();
+        });
+        // Start playing the video whenever the trailer modal is opened
+        $(document).on('click', '.movie-tile', function (event) {
+            var trailerYouTubeId = $(this).attr('data-trailer-youtube-id')
+            var sourceUrl = 'http://www.youtube.com/embed/' + trailerYouTubeId + '?autoplay=1&html5=1';
+            $("#trailer-video-container").empty().append($("<iframe></iframe>", {
+              'id': 'trailer-video',
+              'type': 'text-html',
+              'src': sourceUrl,
+              'frameborder': 0
+            }));
+        });
+        // Animate in the movies when the page loads
+        $(document).ready(function () {
+          $('.movie-tile').hide().first().show("fast", function showNext() {
+            $(this).next("div").show("fast", showNext);
+          });
+        });
+    </script>
+</head>
+
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+    <!-- Trailer Video Modal -->
+    <div class="modal" id="trailer">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <a href="#" class="hanging-close" data-dismiss="modal" aria-hidden="true">
+            <img src="https://lh5.ggpht.com/v4-628SilF0HtHuHdu5EzxD7WRqOrrTIDi_MhEG6_qkNtUK5Wg7KPkofp_VJoF7RS2LhxwEFCO1ICHZlc-o_=s0#w=24&h=24"/>
+          </a>
+          <div class="scale-media" id="trailer-video-container">
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Main Page Content -->
+    <div class="container">
+      <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">Assista a um bom filme!</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="WgWe9QVqrl0" data-toggle="modal" data-target="#trailer">
+    <img src="http://img.goldposter.com/2016/05/The-Lure_poster_goldposter_com_1.jpg?x-oss-process=image/resize,m_fill,h_800,w_535/quality,q_80" width="220" height="342">
+    <h2>The Lure</h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="54fv-tP7cDg" data-toggle="modal" data-target="#trailer">
+    <img src="https://m.media-amazon.com/images/M/MV5BMmMxYjk5MzItNzA5NC00MzVhLWIxMDAtNTg0YWMyNmM3Y2Q0XkEyXkFqcGdeQXVyNjU0ODQxODk@._V1_UY1200_CR109,0,630,1200_AL_.jpg" width="220" height="342">
+    <h2>Icaros, a vision</h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="vgQMHG9SGlU" data-toggle="modal" data-target="#trailer">
+    <img src="http://img.goldposter.com/2017/09/thelma_poster_goldposter_com_4.jpg?x-oss-process=image/resize,m_fill,h_800,w_600/quality,q_80" width="220" height="342">
+    <h2>Thelma</h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="jBeqGcMaC-A" data-toggle="modal" data-target="#trailer">
+    <img src="https://cdn1.theyoungfolks.com/wp-content/uploads/2017/04/27015809/cityofghosts-770x770.jpg" width="220" height="342">
+    <h2>City of Ghosts</h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="svnAD0TApb8" data-toggle="modal" data-target="#trailer">
+    <img src="https://www.otakupt.com/wp-content/uploads/2017/03/Covenast.jpg" width="220" height="342">
+    <h2>Alien: Covenant</h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="qG0af8nliCE" data-toggle="modal" data-target="#trailer">
+    <img src="https://3.bp.blogspot.com/-3WVzL1R_WrU/WmyHlpt1mAI/AAAAAAAABGY/EdoVEkyTesYX_DOrOVLFjerGLr1hqxnQACLcBGAs/s1600/SUPER_DARK_TIMES_POSTER.jpg" width="220" height="342">
+    <h2>Super Dark Times</h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="d1mlDaiFx-s" data-toggle="modal" data-target="#trailer">
+    <img src="https://3.bp.blogspot.com/-AI6ggzIuLaY/WMQdL5sJXNI/AAAAAAAA10A/jLNNT1E_RacEDR4Fdgluctj4d80jSRVewCLcB/s1600/atomic-blonde-poster.jpg" width="220" height="342">
+    <h2>Atomic Blonde</h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="cNi_HC839Wo" data-toggle="modal" data-target="#trailer">
+    <img src="https://http2.mlstatic.com/postercartaz-filme-lady-bird-hora-de-voar-D_NQ_NP_906370-MLB26867443950_022018-F.jpg" width="220" height="342">
+    <h2>Lady Bird</h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="2KLLkj84GAo" data-toggle="modal" data-target="#trailer">
+    <img src="http://www.vortexcultural.com.br/images/2018/04/Lucky-poster.jpg" width="220" height="342">
+    <h2>Lucky</h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="nrR-SbCRgCU" data-toggle="modal" data-target="#trailer">
+    <img src="https://i.pinimg.com/originals/bc/f1/f8/bcf1f8e3c700bf311e29641d7171721e.jpg" width="220" height="342">
+    <h2>Good Time</h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="CQFdGfwChtw" data-toggle="modal" data-target="#trailer">
+    <img src="https://3.bp.blogspot.com/-sI3-9p6ix-I/WZoMMol4M6I/AAAAAAAA2T0/v95h6OwiZ2c9_dNIarFORn4q6CrI0DBgACLcBGAs/s1600/killing-sacred-deer.jpg" width="220" height="342">
+    <h2>The Killing of a Sacred Deer</h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="oEbHM8Vsvlo" data-toggle="modal" data-target="#trailer">
+    <img src="http://br.web.img3.acsta.net/r_1280_720/pictures/17/01/31/15/39/015417.jpg" width="220" height="342">
+    <h2>Dawson City: Frozen Time</h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="pRc_-iK3RVE" data-toggle="modal" data-target="#trailer">
+    <img src="https://m.media-amazon.com/images/M/MV5BMTY2NTQ3NTEzNF5BMl5BanBnXkFtZTgwMzA0MzY1OTE@._V1_UY1200_CR90,0,630,1200_AL_.jpg" width="220" height="342">
+    <h2>The Blackcoat's Daughter</h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="yxLByThNvWU" data-toggle="modal" data-target="#trailer">
+    <img src="http://br.web.img3.acsta.net/r_1280_720/pictures/17/01/10/19/12/435203.jpg" width="220" height="342">
+    <h2>I Called Him Morgan</h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="wwjtdOqTmrA" data-toggle="modal" data-target="#trailer">
+    <img src="http://vertentesdocinema.com/wp-content/uploads/2017/06/the-lost-city-of-z-poster.jpg" width="220" height="342">
+    <h2>The Lost City of Z</h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="xNsiQMeSvMk" data-toggle="modal" data-target="#trailer">
+    <img src="https://i.pinimg.com/originals/63/02/2f/63022ff9113f3acbc8a1c11d7a1a9a12.jpg" width="220" height="342">
+    <h2>Phantom Thread</h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="a891D5_bGY4" data-toggle="modal" data-target="#trailer">
+    <img src="https://3.bp.blogspot.com/-m52RBWWNe0o/WWV1UgGPJgI/AAAAAAAACaE/RatEwwzhyuMfwO1CyJjFGqh5CZIg5yovwCLcBGAs/s1600/i-dont-feel-at-home-in-this-world-anymore-590e339849de9.jpg" width="220" height="342">
+    <h2>I Don't Feel At Home</h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="r3dcnV6Z9Zs" data-toggle="modal" data-target="#trailer">
+    <img src="http://br.web.img3.acsta.net/r_1280_720/pictures/17/08/17/13/26/546003.jpg" width="220" height="342">
+    <h2>Columbus</h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="SccmZSOW3OA" data-toggle="modal" data-target="#trailer">
+    <img src="http://2.bp.blogspot.com/-bp_ArfB8fxI/Vngu5ZJsyyI/AAAAAAAAKpE/W3BUYpViPQs/s1600/marjorie%2Bprime359.jpg" width="220" height="342">
+    <h2>Marjorie Prime</h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="F-eMt3SrfFU" data-toggle="modal" data-target="#trailer">
+    <img src="https://i.pinimg.com/originals/dc/5c/85/dc5c85ee3569a61eda6791e5ce658c8c.png" width="220" height="342">
+    <h2>Dunkirk</h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="2Z0N8ULhuUA" data-toggle="modal" data-target="#trailer">
+    <img src="http://br.web.img3.acsta.net/r_1280_720/pictures/17/03/20/10/26/119027.jpg" width="220" height="342">
+    <h2>Lady Macbeth</h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="b01DL8DTUGM" data-toggle="modal" data-target="#trailer">
+    <img src="https://ewedit.files.wordpress.com/2017/12/wormwood.jpg" width="220" height="342">
+    <h2>Wormwood</h2>
+</div>
+
+    </div>
+  </body>
+</html>
