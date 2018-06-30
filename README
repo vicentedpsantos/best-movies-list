@@ -1,0 +1,23 @@
+Project Title
+Best Movies of 2017
+
+Getting Started
+To run the project locally, execute the file called entertainment_center.py with the command python entertainment_center.py
+
+Prerequisites
+python 2.7
+On Ubuntu run command sudo apt install python2.7 python-pip
+On Windows, go to https://www.python.org/downloads/windows/
+On MacOS, go to https://www.python.org/downloads/mac-osx/
+
+Open terminal/command prompt/shell and run 
+
+python entertainmentcenter.py
+
+Built With
+Python IDLE
+CSS, Bootstrap
+JavaScript, JQuery
+
+Authors
+Vicente D. P. Santos + Udacity
