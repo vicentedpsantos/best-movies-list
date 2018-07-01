@@ -1,4 +1,9 @@
 # This Python file uses the following encoding: utf-8
+
+"""This module is responsible for instantiating objects of the class
+Movie, appending them to a list, and passing it to the
+open_movies_page function in the module fresh_tomatoes"""
+
 import media
 import fresh_tomatoes
 
