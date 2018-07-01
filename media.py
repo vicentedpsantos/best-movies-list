@@ -1,11 +1,21 @@
 class Movie():
-    """class returns an object Movie
+    """Responsible for creating Movie objects
 
-    Arguments are:
-    -> Title of the movie
-    -> Brief Storyline of the movie
-    -> Link to poster image
-    -> Link to official trailer on Youtube"""
+    Parameters
+    ----------
+    movie_title : string
+        Title of the movie
+    movie_storyline : string
+        Brief description of the story of the movie
+    poster_image_url : string
+        Link to image of official movie poster    
+    trailer_youtube_url : string
+        URL link to official movie trailer on YouTube
+
+    Returns
+    -------
+    When instatiated, returns object of Class Movie
+    """
 
     def __init__(self, movie_title, movie_storyline,
                  poster_image_url, trailer_youtube_url):

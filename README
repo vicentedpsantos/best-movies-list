@@ -1,23 +1,30 @@
-Project Title
-Best Movies of 2017
+<h1>Best Movies of 2017</h1>
 
-Getting Started
-To run the project locally, execute the file called entertainment_center.py with the command python entertainment_center.py
+<h2>Getting Started</h2>
+	To run the project locally, execute the file called entertainment_center.py with the command 		python entertainment_center.py
 
-Prerequisites
-python 2.7
-On Ubuntu run command sudo apt install python2.7 python-pip
-On Windows, go to https://www.python.org/downloads/windows/
-On MacOS, go to https://www.python.org/downloads/mac-osx/
+<h3>Prerequisites:</h3>
+	python 2.7
 
-Open terminal/command prompt/shell and run 
+<h3>Installation of prerequisites:</h3>
+	On Ubuntu, on the terminal run command sudo apt install python2.7 python-pip
+	On Windows, go to https://www.python.org/downloads/windows/
+	On MacOS, go to https://www.python.org/downloads/mac-osx/
 
-python entertainmentcenter.py
+<h3>To run this project:</h3>
+	Clone the directory https://github.com/vicentedpsantos/best-movies-list.git
+	Navigate to the directory cd repository_name
+	Run python entertainment_center.py
+	
+	On IDLE:
+	Open IDLE
+	Open file entertainment_center.py
+	In the menu bar click on Run -> Run Module or press F5 on your keyboard
 
-Built With
-Python IDLE
-CSS, Bootstrap
-JavaScript, JQuery
+<h3>Built With</h3>
+	Python IDLE
+	CSS, Bootstrap
+	JavaScript, JQuery
 
-Authors
+<h1>Authors</h3>
 Vicente D. P. Santos + Udacity

@@ -1,12 +1,18 @@
 # This Python file uses the following encoding: utf-8
 
-"""This module is responsible for instantiating objects of the class
-Movie, appending them to a list, and passing it to the
-open_movies_page function in the module fresh_tomatoes"""
+"""Running this module through command python entertainment_center.py
+will render page with listed movies.
+This module is also responsible for instantiating objects of the class
+Movie, appending them to a list, and passing the list to the
+open_movies_page function from the module fresh_tomatoes"""
 
+# importing class Movie from module media in order to instantiate Movie Objects
 import media
+
+# importing fresh_tomatoes to render html through the open_movies_page function
 import fresh_tomatoes
 
+# instantiating objects of class Movie
 the_lure = media.Movie("The Lure",
                        "familiar drama about a young couple torn "
                        "between individual dreams and professional desires",
@@ -252,6 +258,7 @@ wormwood = media.Movie("Wormwood",
                        "mwood.jpg",
                        "https://www.youtube.com/watch?v=b01DL8DTUGM")
 
+# pushing objects into list movies
 movies = [the_lure,
           icaros_a_vision,
           thelma,
@@ -275,4 +282,5 @@ movies = [the_lure,
           lady_macbeth,
           wormwood]
 
+# calling function open_movies_page passing movies to render HTML
 fresh_tomatoes.open_movies_page(movies)
