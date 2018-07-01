@@ -1,6 +1,6 @@
 <h1>MovieList</h1>
 
-	This website lists the best movies of 2017, elected by the<br/> author. Movie objects are instantiated through class Movie, and take as arguments their title<br/>, brief storyline, poster image link and youtube official trailer link. A list is created with<br/> all movie objects and then passed through a function that renders the html + css + JS of the website.
+This website lists the best movies of 2017, elected by the author. Movie objects are instantiated through class Movie, and take as arguments their title, brief storyline, poster image link and youtube official trailer link. A list is created with all movie objects and then passed through a function that renders the html + css + JS of the website.
 
 <h2>Prerequisites: </h2>
 	python 2.7
