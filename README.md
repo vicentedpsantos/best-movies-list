@@ -13,6 +13,7 @@ This website lists the best movies of 2017, elected by the author. Movie objects
 	**On MacOS**, go to https://www.python.org/downloads/mac-osx/
 
 <h2>To run this project:</h2>
+	
 	Clone this repository<br/>
 	Navigate to the directory cd repository_name<br/>
 	Run python entertainment_center.py<br/>
