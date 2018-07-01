@@ -6,11 +6,11 @@
 	python 2.7
 
 <h2>Installation of prerequisites:</h2>
-	<h3>On Ubuntu</h3>, on the terminal run command sudo apt install python2.7 python-pip
+	**On Ubuntu**, on the terminal run command sudo apt install python2.7 python-pip
 	
-	<h3>On Windows</h3>, go to https://www.python.org/downloads/windows/
+	**On Windows**, go to https://www.python.org/downloads/windows/
 	
-	<h3>On MacOS</h3>, go to https://www.python.org/downloads/mac-osx/
+	**On MacOS**, go to https://www.python.org/downloads/mac-osx/
 
 <h2>To run this project:</h2>
 	Clone this repository
