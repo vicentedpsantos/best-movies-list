@@ -11,7 +11,7 @@ Installation of prerequisites:
 	On MacOS, go to https://www.python.org/downloads/mac-osx/
 
 To run this project:
-	Clone the directory https://github.com/vicentedpsantos/best-movies-list.git
+	Clone this repository
 	Navigate to the directory cd repository_name
 	Run python entertainment_center.py
 	
