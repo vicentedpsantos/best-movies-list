@@ -13,14 +13,14 @@
 	**On MacOS**, go to https://www.python.org/downloads/mac-osx/
 
 <h2>To run this project:</h2>
-	Clone this repository\n
-	Navigate to the directory cd repository_name
-	Run python entertainment_center.py
+	Clone this repository  
+	Navigate to the directory cd repository_name  
+	Run python entertainment_center.py  
 	
-	On IDLE:
-	Open IDLE
-	Open file entertainment_center.py
-	In the menu bar click on Run -> Run Module or press F5 on your keyboard
+	On IDLE:  
+	Open IDLE  
+	Open file entertainment_center.py  
+	In the menu bar click on Run -> Run Module or press F5 on your keyboard  
 
 <h2>Built With</h2>
 	Python, IDLE
